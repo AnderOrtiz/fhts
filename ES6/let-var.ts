@@ -1,9 +1,9 @@
 (() => {
     // console.log('let');
 
-    const nombre = 'Ander'
+    const nombre:string = 'Ander'
 
-    const getName = () =>{
+    const getName = ():void =>{
         console.log('viejo Getname')
     }
 
