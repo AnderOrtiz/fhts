@@ -28,6 +28,7 @@ const villanos = [{
         edad: undefined,
         mutante: true
     }];
+console.log(`pasó por aquí`);
 const charles = {
     poder: "psiquico",
     estatura: 1.78
@@ -36,7 +37,9 @@ const apocalipsis = {
     lider: true,
     miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"]
 };
+console.log(`pasó por acá`);
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 let mystique;
 mystique = charles;
 mystique = apocalipsis;
+//# sourceMappingURL=app.js.map

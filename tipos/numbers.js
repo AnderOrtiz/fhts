@@ -12,3 +12,4 @@
     avengers = Number('55A'); //warning not a number! pero es considerado como un número para js
     console.log({ avengers });
 })();
+//# sourceMappingURL=numbers.js.map

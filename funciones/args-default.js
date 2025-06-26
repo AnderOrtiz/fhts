@@ -10,3 +10,4 @@
     const name = fullName('Tony', 'Stark', true); // es un parámetro opcional ya que tiene un valor por defaul; 
     console.log({ name });
 })();
+//# sourceMappingURL=args-default.js.map
