@@ -9,7 +9,7 @@
     else {
         console.log('Nos salvamos');
     }
-    avengers = Number('55A'); //warning not a number! pero es considerado como un número para js
+    avengers = Number('55A');
     console.log({ avengers });
 })();
 //# sourceMappingURL=numbers.js.map

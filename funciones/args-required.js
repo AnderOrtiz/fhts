@@ -1,6 +1,5 @@
 "use strict";
 (() => {
-    // argumentos requeridos
     const fullName = (firstName, lastName) => {
         return `${firstName} ${lastName}`;
     };

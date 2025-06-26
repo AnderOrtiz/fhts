@@ -7,7 +7,6 @@
     };
     flash = {
         name: 'Clark Kent',
-        //age: 60, // es opcional
         powers: ['Súper fuerza'],
         getName() {
             return this.name;

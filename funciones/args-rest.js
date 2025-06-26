@@ -1,6 +1,5 @@
 "use strict";
 (() => {
-    //rest sirve para mandar mas argumentos
     const fullName = (firstName, ...restArgs) => {
         return `${firstName} ${restArgs.join(' ')}`;
     };
