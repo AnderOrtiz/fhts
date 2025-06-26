@@ -1,30 +1,82 @@
-// Funciones Básicas
-const sumar = ( a:number, b:number ):number => a + b;
 
-
-const contar = ( heroes:string[] ):number => heroes.length;
-
-
-const superHeroes:string[] = ["Flash", "Arrow", "Superman", "Linterna Verde"];
-contar(superHeroes);
-
-//Parametros por defecto
-const llamarBatman = ( llamar:boolean = true ):void => {
-  if( llamar ){
-    console.log("Batiseñal activada");
-  }
+type Details = {
+    carroceria: string,
+    modelo: string,
+    antibalas: boolean,
+    pasajeros: number,
+    disparar?: () => void,
 }
 
-llamarBatman();
+// Objetos
+const batimovil: Details = {
+    carroceria: "Negra",
+    modelo: "6x6",
+    antibalas: true,
+    pasajeros: 4
+};
 
-// Rest?
-const unirheroes = ( ...personas:string[] ):string => personas.join(", ");
+const bumblebee: Details = {
+    carroceria: "Amarillo con negro",
+    modelo: "4x2",
+    antibalas: true,
+    pasajeros: 4,
+    disparar() { // El metodo disparar es opcional
+        console.log("Disparando");
+    }
+};
 
 
+// Villanos debe de ser un arreglo de objetos personalizados
+type Villan = {
+    nombre: string,
+    edad:(number|undefined),
+    mutante: boolean
+}
 
-// Tipo funcion
-const noHaceNada = ( numero:number, texto:string, booleano:boolean, arreglo:[] ): void => {};
+const villanos: Villan[] = [{
+    nombre: "Lex Luthor",
+    edad: 54,
+    mutante: false
+}, {
+    nombre: "Erik Magnus Lehnsherr",
+    edad: 49,
+    mutante: true
+}, {
+    nombre: "James Logan",
+    edad: undefined,
+    mutante: true
+}];
 
-// Crear el tipo de funcion que acepte la funcion "noHaceNada"
-let noHaceNadaTampoco: (num:number,text:string, bool:boolean, arr:[]) => void;
-noHaceNadaTampoco = noHaceNada
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
+
+type Charles = {
+    poder:string,
+    estatura:number
+}
+
+console.log(`pasó por aquí`)
+const charles: Charles = {
+    poder: "psiquico",
+    estatura: 1.78
+};
+
+
+type Apocalipsis = {
+    lider:boolean,
+    miembros: string[]
+}
+
+
+const apocalipsis: Apocalipsis = {
+    lider: true,
+    miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"]
+}
+
+console.log(`pasó por acá`)
+
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique: ( Charles | Apocalipsis );
+
+mystique = charles;
+mystique = apocalipsis;
