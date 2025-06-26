@@ -113,7 +113,7 @@
   "exclude": [
     "node_modules2"
   ],
-  // "include": [
-  //   "node_modules" /* Normalemente esto nunca se hace */
-  // ]
+  "include": [
+    "ES6" /* Normalemente esto nunca se hace */
+  ]
 }
