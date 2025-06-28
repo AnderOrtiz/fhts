@@ -25,6 +25,11 @@
         console.log(ironman, resto)
     }
 
-printerAnvengers(avenger);
+// printerAnvengers(avenger);
+
+const avengerArr: [string, boolean, number] = ['Cap. América', true, 150.15]
+
+const [cap,ironman, seriaUnNumero] = avengerArr;
+// console.log({ironman, cap, seriaUnNumero})
 
 })()
