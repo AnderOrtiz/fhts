@@ -59,14 +59,14 @@ class CheapPiano extends Piano {
 }
 
 
-const Yamaha = new Piano('Yamaha', 8, [324, 35, 594])
-console.table(Yamaha)
+// const Yamaha = new Piano('Yamaha', 8, [324, 35, 594])
+// console.table(Yamaha)
 
-const ExpensiveYamaha = new ExpensivePiano('Yamaha', 8, [324, 35, 594])
-console.table(ExpensiveYamaha)
+// const ExpensiveYamaha = new ExpensivePiano('Yamaha', 8, [324, 35, 594])
+// console.table(ExpensiveYamaha)
 
-const ExpensiveYamaha2 = new ExpensivePiano('Yamaha', 6, [324, 35, 594])
-console.table(ExpensiveYamaha2)
+// const ExpensiveYamaha2 = new ExpensivePiano('Yamaha', 6, [324, 35, 594])
+// console.table(ExpensiveYamaha2)
 
-const ChaepYamaha = new CheapPiano('Yamaha', 4, [324, 35, 594], true)
-console.table(ChaepYamaha)
+// const ChaepYamaha = new CheapPiano('Yamaha', 4, [324, 35, 594], true)
+// console.table(ChaepYamaha)

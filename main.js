@@ -37,6 +37,38 @@
     }
     const wolverine = new Xmen('Wolverine', 'Logan', true);
 })();
+(() => {
+    class Avenger {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+        getFullname() {
+            return `${this.name} ${this, this.realName}`;
+        }
+    }
+    class Xmen extends Avenger {
+        constructor(name, realName, isMutant) {
+            super(name, realName);
+            this.isMutant = isMutant;
+        }
+        get fullName() {
+            return `${this.name} --- ${this.realName}`;
+        }
+        set fullName(name) {
+            if (name.length < 3) {
+                throw new Error('Nombre muy corto');
+            }
+            this.name = name;
+        }
+        getFullNamDesdeXmen() {
+            console.log(super.getFullname);
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan', true);
+    wolverine.fullName = 'Ander';
+    console.log(wolverine.fullName);
+})();
 class Piano {
     constructor(marca, octavas = 8, idDistorciones = []) {
         this.marca = marca;
@@ -76,12 +108,4 @@ class CheapPiano extends Piano {
         this.chino = chino;
     }
 }
-const Yamaha = new Piano('Yamaha', 8, [324, 35, 594]);
-console.table(Yamaha);
-const ExpensiveYamaha = new ExpensivePiano('Yamaha', 8, [324, 35, 594]);
-console.table(ExpensiveYamaha);
-const ExpensiveYamaha2 = new ExpensivePiano('Yamaha', 6, [324, 35, 594]);
-console.table(ExpensiveYamaha2);
-const ChaepYamaha = new CheapPiano('Yamaha', 4, [324, 35, 594], true);
-console.table(ChaepYamaha);
 //# sourceMappingURL=main.js.map
