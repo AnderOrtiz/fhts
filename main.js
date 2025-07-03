@@ -1,5 +1,27 @@
 "use strict";
 (() => {
+    class Mutante {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+        }
+    }
+    class Xmen extends Mutante {
+        salvarMundo() {
+            return 'Mundo salvado';
+        }
+    }
+    class Villian extends Mutante {
+        consquistarMundo() {
+            return 'Mundo conquistado';
+        }
+    }
+    const woleverine = new Xmen('Wolverine', 'Logan');
+    const magneto = new Villian('Magneto', 'Magnus');
+    const printName = (character) => console.log(character.realName);
+    printName(woleverine);
+})();
+(() => {
     class Avenger {
         static getAvgAge() {
             return this.name;
@@ -66,8 +88,6 @@
         }
     }
     const wolverine = new Xmen('Wolverine', 'Logan', true);
-    wolverine.fullName = 'Ander';
-    console.log(wolverine.fullName);
 })();
 class Piano {
     constructor(marca, octavas = 8, idDistorciones = []) {
@@ -119,12 +139,4 @@ class CheapPiano extends Piano {
         this.chino = chino;
     }
 }
-const Yamaha = new Piano('Yamaha', 8, [324, 35, 594]);
-console.table(Yamaha);
-const ExpensiveYamaha = new ExpensivePiano('Yamaha', 8, [324, 35, 594]);
-console.table(ExpensiveYamaha);
-const ExpensiveYamaha2 = new ExpensivePiano('Yamaha', 6, [324, 35, 594]);
-console.table(ExpensiveYamaha2);
-const ChaepYamaha = new CheapPiano('Yamaha', 4, [324, 35, 594], true);
-console.table(ChaepYamaha);
 //# sourceMappingURL=main.js.map

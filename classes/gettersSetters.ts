@@ -43,8 +43,8 @@ class Xmen extends Avenger {
 
 const wolverine = new Xmen('Wolverine', 'Logan', true)
 
-wolverine.fullName = 'Ander'
+// wolverine.fullName = 'Ander'
 
-console.log(wolverine.fullName) // los getters no llevan parentesis
+//console.log(wolverine.fullName) // los getters no llevan parentesis
 // wolverine.getFullNamDesdeXmen()
 })()
