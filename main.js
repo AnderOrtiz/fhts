@@ -88,6 +88,11 @@ class Piano {
                 break;
         }
     }
+    set setOctavas(octavas) {
+        if (octavas > 8) {
+            throw new Error('El piano no tiene mas de 8 octavas');
+        }
+    }
 }
 class ExpensivePiano extends Piano {
     constructor(marca, octavas, idDistorciones, dolby = false) {
@@ -96,6 +101,12 @@ class ExpensivePiano extends Piano {
         this.custom(idDistorciones);
         if (octavas === 8) {
             this.isDolby();
+        }
+        if (octavas < 1 && octavas > 8) {
+            throw new Error('octavas fuera de rango');
+        }
+        else {
+            console.log('octavas en orden');
         }
     }
     isDolby() {
@@ -108,4 +119,12 @@ class CheapPiano extends Piano {
         this.chino = chino;
     }
 }
+const Yamaha = new Piano('Yamaha', 8, [324, 35, 594]);
+console.table(Yamaha);
+const ExpensiveYamaha = new ExpensivePiano('Yamaha', 8, [324, 35, 594]);
+console.table(ExpensiveYamaha);
+const ExpensiveYamaha2 = new ExpensivePiano('Yamaha', 6, [324, 35, 594]);
+console.table(ExpensiveYamaha2);
+const ChaepYamaha = new CheapPiano('Yamaha', 4, [324, 35, 594], true);
+console.table(ChaepYamaha);
 //# sourceMappingURL=main.js.map
