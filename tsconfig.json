@@ -114,6 +114,6 @@
     "node_modules"
   ],
   "include": [
-    "classes" /* Normalemente esto nunca se hace */
+    "interfaces" /* Normalemente esto nunca se hace */
   ]
 }
