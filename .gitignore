@@ -1,0 +1,26 @@
+# Archivos del sistema macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Iconos de carpeta personalizados
+Icon
+
+# Archivos de metadatos de Finder
+._*
+
+# Archivos de Spotlight
+.Spotlight-V100
+.Trashes
+
+# Archivos de volúmenes externos
+.VolumeIcon.icns
+
+# Archivos temporales de macOS
+.fseventsd
+.TemporaryItems
+.com.apple.timemachine.donotpresent
+.com.apple.mobilebackups
+
+# Archivos de montaje y red
+.Network Trash Folder
